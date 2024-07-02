@@ -6,6 +6,15 @@
             "id": "55b768a7-b946-489f-aa74-91e4a74badf0",
             "actions": [
                 {
+                    "name": "Look",
+                    "type": "Value",
+                    "id": "d01c2388-c602-4d2d-8b16-e07e824afdca",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
                     "name": "Move",
                     "type": "Value",
                     "id": "b1043e44-e115-43cc-96f0-f544c39fd9cd",
@@ -15,13 +24,13 @@
                     "initialStateCheck": true
                 },
                 {
-                    "name": "Look",
-                    "type": "Value",
-                    "id": "d01c2388-c602-4d2d-8b16-e07e824afdca",
-                    "expectedControlType": "Vector2",
+                    "name": "Sprint",
+                    "type": "Button",
+                    "id": "d691b6c9-7e2b-42e9-b7f1-4da0be07f8a0",
+                    "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
-                    "initialStateCheck": true
+                    "initialStateCheck": false
                 },
                 {
                     "name": "Jump",
@@ -33,9 +42,9 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "Sprint",
+                    "name": "Shoot",
                     "type": "Button",
-                    "id": "d691b6c9-7e2b-42e9-b7f1-4da0be07f8a0",
+                    "id": "ce5f4c32-2323-4b61-8857-245fa6b55699",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
@@ -43,6 +52,28 @@
                 }
             ],
             "bindings": [
+                {
+                    "name": "",
+                    "id": "be451435-75bb-4c9e-a863-ee32ea859dbc",
+                    "path": "<Mouse>/delta",
+                    "interactions": "",
+                    "processors": "ScaleVector2(x=0.2,y=0.2)",
+                    "groups": "",
+                    "action": "Look",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "1522708c-351c-47b2-b4f2-d38411c6003e",
+                    "path": "<Keyboard>/shift",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Sprint",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
                 {
                     "name": "2D Vector",
                     "id": "cd16bc60-732b-40f6-8ea3-0723bb2e25c4",
@@ -100,17 +131,6 @@
                 },
                 {
                     "name": "",
-                    "id": "be451435-75bb-4c9e-a863-ee32ea859dbc",
-                    "path": "<Mouse>/delta",
-                    "interactions": "",
-                    "processors": "ScaleVector2(x=0.2,y=0.2)",
-                    "groups": "",
-                    "action": "Look",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
                     "id": "6afd28b1-9ad6-4e47-8642-dfc30de8f4e9",
                     "path": "<Keyboard>/space",
                     "interactions": "",
@@ -122,12 +142,12 @@
                 },
                 {
                     "name": "",
-                    "id": "1522708c-351c-47b2-b4f2-d38411c6003e",
-                    "path": "<Keyboard>/shift",
+                    "id": "6bbcb65d-35ad-4091-a9d8-324c784be3f2",
+                    "path": "<Mouse>/rightButton",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Sprint",
+                    "action": "Shoot",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
